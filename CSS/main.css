@@ -47,7 +47,39 @@ body
 {
     body
     {
-        width:  80vh;
+        width:  62vh !important;
+    }
+    .Special-heading
+    {
+        font-size: 60px !important;
+    }
+    .Special-heading + p
+    {
+        font-size: 18px !important  ;
+    }
+    .contact-page .contact .box
+    {
+        width: 270px !important;
+    }
+    .contact-page .contact .box img
+    {
+        width: 270px !important;
+    }
+    .contact-page .contact .box .icons
+    {
+        margin-left: 18px !important;
+    }
+    .contact-page .contact .box .icons .whatsapp a, .contact-page .contact .box .icons .Telegram a, .contact-page .contact .box .icons .email a, .contact-page .contact .box .icons .instagram a
+    {
+        width: 210px !important;
+    }
+    footer .foot
+    {
+        padding: 0 !important;
+    }
+    footer p
+    {
+        font-size: 17px !important;
     }
 }
 ul{
