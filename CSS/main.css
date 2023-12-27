@@ -1481,7 +1481,7 @@ color: var(--second-color);
 @media (min-width:1500px) {
     .usertesting-page .usertesting .user:hover
     {
-        height: 680px;
+        height: 700px;
     }
     
 }
