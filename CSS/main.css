@@ -99,7 +99,7 @@ button
     border: none;
     background-image: linear-gradient(var(--main-color),#03423c );
     border-radius: 10px;
-    padding: 0 10px;
+    padding: 0 9px;
     transition: var(--main-transition);
     position: relative;
     bottom: -15px;
@@ -1332,7 +1332,7 @@ color: var(--second-color);
 .explanation .cont .box {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 5px 5px 4px 1px var(--special-heading-color);
+    box-shadow: 3px 3px 4px 1px var(--special-heading-color);
     transition: var(--main-transition);
     display: flex;
     flex-direction: row;
@@ -1340,6 +1340,8 @@ color: var(--second-color);
     margin: auto;
     transition: var(--main-transition);
     min-height: 307.26px;
+    border: 3px solid var(--main-color);
+    overflow-x: hidden;
 }
 .explanation .cont .box.aviso
 {
@@ -1348,7 +1350,7 @@ color: var(--second-color);
 .explanation .cont .box:hover{
     transform: scale(1.05);
     z-index: 1000;
-    box-shadow: 5px 5px 4px 1px #868585;
+    box-shadow: 3px 3px 4px 1px #868585;
 }
 .explanation .cont .box img{
     width: 249px;
@@ -1438,6 +1440,7 @@ color: var(--second-color);
     flex-direction: column;
     justify-content: space-evenly;
     gap: 10px;
+    margin-left: -4px;
 }
 .explanation .cont .box .see .s1
 {
@@ -1998,6 +2001,12 @@ color: var(--second-color);
     animation-delay: 3s;
     animation-fill-mode: forwards;
 }
+.team .box.Thaer
+{
+    animation: team_box_animation_ 2s linear 1; 
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
 @keyframes scale
 {
     from {transform: scale(0);}
@@ -2084,13 +2093,25 @@ color: var(--second-color);
 .explanation .cont .box.soc img
 {
     height: 70px;
+    margin-top: 30px;
+}
+.explanation .cont .box.visit
+{ transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
+.explanation .cont .box.visit img
+{
+    height: 70px;
+    margin: auto;
 }
 .explanation .cont .box.teaser
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 7s;
 }
 .explanation .cont .box.teaser img
 {
@@ -2102,48 +2123,48 @@ color: var(--second-color);
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .explanation .cont .box.vkserfing
 {
     transform: scale(0);
     animation: scale 1s linear;
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 .explanation .cont .box.aviso
 {
     transform: scale(0);
     animation: scale 1s linear;
-    animation-delay: 4s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
 }
 .explanation .cont .box.unu
 {
     transform: scale(0);
     animation: scale 1s linear;
-    animation-delay: 5s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
 }
 .explanation .cont .box.seosprint
 {
     transform: scale(0);
     animation: scale 1s linear;
-    animation-delay: 6s;
+    animation-delay: 5s;
     animation-fill-mode: forwards;
 }
 .explanation .cont .box.payup
 {
     transform: scale(0);
     animation: scale 1s linear;
-    animation-delay: 7s;
+    animation-delay: 8s;
     animation-fill-mode: forwards;
 }
 .explanation .cont .box.buxmoney
 {
     transform: scale(0);
     animation: scale 1s linear;
-    animation-delay: 8s;
+    animation-delay: 9s;
     animation-fill-mode: forwards;
 }
 /* End-Russain-site-after-updates */
