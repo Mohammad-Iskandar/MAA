@@ -1505,6 +1505,11 @@ color: var(--second-color);
         margin-bottom: 30px;
         border-bottom: 1px solid #eee;
     }
+    .explanation .cont .box.getlike img
+    {
+        width: 280px;
+        margin-top: 20px;
+    }
     .explanation .cont .box img.payup
     {
         margin-top: 30px;
