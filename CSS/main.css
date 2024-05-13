@@ -11,7 +11,7 @@
     --main-color : hsl(176, 56%, 55%);
     --second-color: #556270;
     --special-heading-color:#d7d7d7;
-    --main-transition:0.5s ;
+    --main-transition: 0.5s ;
 }
 html
 {
@@ -1333,22 +1333,21 @@ color: var(--second-color);
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px 3px 4px 1px var(--special-heading-color);
-    transition: var(--main-transition);
     display: flex;
     flex-direction: row;
     width: 900px;
     margin: auto;
-    transition: var(--main-transition);
     min-height: 307.26px;
     border: 3px solid var(--main-color);
     overflow-x: hidden;
+    transition: var(--main-transition);
 }
 .explanation .cont .box.aviso
 {
     min-height: 355px;
 }
 .explanation .cont .box:hover{
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
     z-index: 1000;
     box-shadow: 3px 3px 4px 1px #868585;
 }
@@ -2095,6 +2094,13 @@ color: var(--second-color);
     height: 70px;
     margin-top: 30px;
 }
+@media (min-width : 900px)
+{
+    .explanation .cont .box.soc img
+    {
+        margin-top: 140px;
+    }
+}
 .explanation .cont .box.visit
 { transform: scale(0);
     animation: scale 1s linear;
@@ -2160,11 +2166,18 @@ color: var(--second-color);
     animation-delay: 8s;
     animation-fill-mode: forwards;
 }
-.explanation .cont .box.buxmoney
+.explanation .cont .box.getlike
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-delay: 9s;
+    animation-fill-mode: forwards;
+}
+.explanation .cont .box.buxmoney
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-delay: 10s;
     animation-fill-mode: forwards;
 }
 /* End-Russain-site-after-updates */
