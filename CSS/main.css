@@ -491,6 +491,7 @@ li.sites:hover a.web
 /* start explaining websites page */
 
 .selling-pictures .pictures,
+.givvy_apps .givvy,
 .explain ,
 .capatcha-tests .capatcha,
 .Games .games 
@@ -516,6 +517,7 @@ li.sites:hover a.web
 }
 .write-article .articles .article,
 .selling-pictures .pictures .pic,
+.givvy_apps .givvy .givvyapp,
 .telegram-bots .bots .bot,
 .explain .box,
 .wallets-page .wallets .wallet,
@@ -618,6 +620,7 @@ transition-delay: 0.2s;
 }
 .write-article .articles .article:hover,
 .selling-pictures .pictures .pic:hover,
+.givvy_apps .givvy .givvyapp:hover,
 .telegram-bots .bots .bot:hover,
 .explain .box:hover,
 .wallets-page .wallets .wallet:hover,
@@ -625,12 +628,14 @@ transition-delay: 0.2s;
 .Games .games .game:hover
 { 
     box-shadow: 4px 4px 6px 0px hsl(0deg 0.5% 60.42%);transform: scale(1.05);
+    direction: rtl;
 }
 .telegram-bots .bots .bot.Freedgbfaucetpay:hover{
     height: 410px;
 }
 .write-article .articles .article img,
 .selling-pictures .pictures .pic img,
+.givvy_apps .givvy .givvyapp img,
 .telegram-bots .bots .bot img,
 .capatcha-tests .cap img,
 .Games .games .game img {
@@ -653,6 +658,7 @@ transition-delay: 0.2s;
 }
 .write-article .articles .article:hover img,
 .selling-pictures .pictures .pic:hover img,
+.givvy_apps .givvy .givvyapp:hover img,
 .telegram-bots .bots .bot:hover img, 
 .explain .box:hover img,
 .wallets-page .wallets .wallet:hover img,
@@ -663,6 +669,7 @@ transition-delay: 0.2s;
 }
 .write-article .articles .article h1,
 .selling-pictures .pictures .pic h1 ,
+.givvy_apps .givvy .givvyapp h1,
 .telegram-bots .bots .bot h1,
 .explain .box h1,
 .wallets-page .wallets .wallet h1,
@@ -680,6 +687,7 @@ transition-delay: 0.2s;
 }
 .write-article .articles .article h1::before,
 .selling-pictures .pictures .pic h1::before,
+.givvy_apps .givvy .givvyapp h1::before,
 .telegram-bots .bots .bot h1::before,
 .explain .box h1::before,
 .wallets-page .wallets .wallet h1::before,
@@ -698,6 +706,7 @@ transition-delay: 0.2s;
 }
 .write-article .articles .article h1::after,
 .selling-pictures .pictures .pic h1::after,
+.givvy_apps .givvy .givvyapp h1::after,
 .telegram-bots .bots .bot h1::after,
 .explain .box h1::after,
 .wallets-page .wallets .wallet h1::after,
@@ -739,6 +748,7 @@ transition-delay: 0.2s;
 }
 .write-article .articles .article p,
 .selling-pictures .pictures .pic p,
+.givvy_apps .givvy .givvyapp p,
 .telegram-bots .bots .bot p,
 .explain .box p,
 .wallets-page .wallets .wallet p,
@@ -755,6 +765,7 @@ transition-delay: 0.2s;
 .explain .box p{min-height: 151px; margin-top: 50px;display: flex;align-items: center;}
 .write-article .articles .article button,
 .selling-pictures .pictures .pic button,
+.givvy_apps .givvy .givvyapp button,
 .telegram-bots .bots .bot button,
 .explain .box button,
 .wallets-page .wallets .wallet button,
@@ -769,6 +780,7 @@ transition-delay: 0.2s;
 }
 .write-article .articles .article button a,
 .selling-pictures .pictures .pic button a,
+.givvy_apps .givvy .givvyapp button a,
 .telegram-bots .bots .bot button a,
 .explain .box button a ,
 .wallets-page .wallets .wallet button a,
@@ -1663,6 +1675,10 @@ color: var(--second-color);
 {
     height: 770px;
 }
+.usertesting-page .usertesting .user.res:hover
+{
+    height: 440px;
+}
 @media (min-width:1500px) {
     .usertesting-page .usertesting .user:hover
     {
@@ -1823,6 +1839,7 @@ color: var(--second-color);
 /* End Write article page */
 /* Start sell photos page */
 .selling-pictures .pictures .pic,
+.givvy_apps .givvy .givvyapp,
 .capatcha-tests .cap,
 .Games .games .game
 {
@@ -1831,6 +1848,8 @@ color: var(--second-color);
 }
 .selling-pictures .pictures .pic:hover h1::after,
 .selling-pictures .pictures .pic:hover h1::before,
+.givvy_apps .givvy .givvyapp:hover h1::after,
+.givvy_apps .givvy .givvyapp:hover h1::before,
 .capatcha-tests .cap:hover h1::after,
 .capatcha-tests .cap:hover h1::before,
 .Games .games .game:hover h1::after,
@@ -1839,18 +1858,21 @@ color: var(--second-color);
     background-color: var(--main-color);
 }
 .selling-pictures .pictures .pic:not(:last-child):hover,
+.givvy_apps .givvy .givvyapp:not(:last-child):hover,
 .capatcha-tests .cap:not(:last-child):hover,
 .Games .games .game:not(:last-child):hover
 {
     height: 470px;
 }
-.selling-pictures .pictures .pic:hover,
+.selling-pictures .pictures .pic:hover
+.givvy_apps .givvy .givvyapp:hover,
 .capatcha-tests .cap:hover,
 .Games .games .game:hover
 {
     height: 500px;
 }
 .selling-pictures .pictures .pic:hover .ex,
+.givvy_apps .givvy .givvyapp:hover .ex,
 .capatcha-tests .cap:hover .ex,
 .Games .games .game:hover .ex
 {
@@ -2085,14 +2107,21 @@ color: var(--second-color);
     animation-fill-mode: forwards;
     animation-delay: 5s;
 }
+.wallets-page .wallets .wallet.cwallet
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+}
 /* end_of_contact_us_and_team_and_wallets_after_update */
 /* Russain-site-after-updates */
 .explanation .cont .box.soc
 {
     min-height: 358.26px;
-    transform: scale(0);
+    /* transform: scale(0);
     animation: scale 1s linear;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 .explanation .cont .box.soc img
 {
@@ -2106,30 +2135,30 @@ color: var(--second-color);
         margin-top: 140px;
     }
 }
-.explanation .cont .box.visit
+/* .explanation .cont .box.visit
 { transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
     animation-delay: 6s;
-}
+} */
 .explanation .cont .box.visit img
 {
     height: 70px;
     margin: auto;
 }
-.explanation .cont .box.teaser
+/* .explanation .cont .box.teaser
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
     animation-delay: 7s;
-}
+} */
 .explanation .cont .box.teaser img
 {
     height: 90px;
     background-color: var(--second-color);
 }
-.explanation .cont .box.vktarget
+/* .explanation .cont .box.vktarget
 {
     transform: scale(0);
     animation: scale 1s linear;
@@ -2184,7 +2213,7 @@ color: var(--second-color);
     animation: scale 1s linear;
     animation-delay: 10s;
     animation-fill-mode: forwards;
-}
+} */
 /* End-Russain-site-after-updates */
 /* usertesting-after-updates */
 .usertesting .user.usert
@@ -2207,12 +2236,19 @@ color: var(--second-color);
     animation-fill-mode: forwards;
     animation-delay: 2s;
 }
+.usertesting .user.res
+{   
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
 .usertesting .user.unknown
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 4s;
 }
 /* end-usertesting-after-updates */  
 /* selling-photos-after-updates */
@@ -2324,3 +2360,25 @@ color: var(--second-color);
     animation-delay: 2s; 
 }
 /* end games page */
+/* Start givvy apps page */
+.givvy_apps .givvyapp.gsocial
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+}
+.givvy_apps .givvyapp.gvideos
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+.givvy_apps .givvyapp.unknown
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+/* End givvy apps page */
