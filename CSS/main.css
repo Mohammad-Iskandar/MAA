@@ -843,7 +843,7 @@ transition-delay: 0.2s;
 }
 .wallets-page .wallets .wallet:nth-child(2):hover
 {
-    height: 520px;
+    height: 550px;
 }
 .wallets-page .wallets .wallet:nth-child(3):hover
 {
@@ -1620,6 +1620,13 @@ color: var(--second-color);
 {
     height: 380px;
 }
+.telegram-bots .bots .bot.box.mining_bots:hover
+{
+    height: 500px !important;
+}
+.telegram-bots .bots .bot.mining_bots:hover {
+    height: 310px !important;
+}
 .telegram-bots .bots .bot:nth-child(6):hover,
 .telegram-bots .bots .bot:nth-child(7):hover,
 .telegram-bots .bots .bot:nth-child(8):hover
@@ -2102,35 +2109,42 @@ color: var(--second-color);
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
-.wallets-page .wallets .wallet.faucetpay
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
     animation-delay: 3s;
 }
-.wallets-page .wallets .wallet.Yobit
+.wallets-page .wallets .wallet.tonkeeper
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
     animation-delay: 4s;
 }
-.wallets-page .wallets .wallet.trustwallet
+.wallets-page .wallets .wallet.faucetpay
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
     animation-delay: 5s;
 }
-.wallets-page .wallets .wallet.cwallet
+.wallets-page .wallets .wallet.Yobit
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
     animation-delay: 6s;
+}
+.wallets-page .wallets .wallet.trustwallet
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.wallets-page .wallets .wallet.cwallet
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
 }
 /* end_of_contact_us_and_team_and_wallets_after_update */
 /* Russain-site-after-updates */
@@ -2300,32 +2314,40 @@ color: var(--second-color);
 }
 /*end-writing-articles-after-updates */
 /*telegram-bots-after-updates */
-.telegram-bots .bot.squad-trx
+
+.telegram-bots .bot.mining_bots
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
 }
-.telegram-bots .bot.gmail
+.telegram-bots .bot.squad-trx
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
     animation-delay: 1s; 
 }
+.telegram-bots .bot.gmail
+{
+    transform: scale(0);
+    animation: scale 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s; 
+}
 .telegram-bots .bot.adflyer
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 .telegram-bots .bot.unknown
 {
     transform: scale(0);
     animation: scale 1s linear;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 4s;
 }
 /*end-telegram-bots-after-updates */
 /* start-capatcha-page */
