@@ -1919,6 +1919,13 @@ color: var(--second-color);
 {
     height: 500px !important;
 }
+@media screen and  (max-width:900px) 
+{
+    .telegram-bots .bots .bot.box.mining_bots:hover
+    {
+        height: 510px !important;
+    }
+}
 .telegram-bots .bots .bot.mining_bots:hover {
     height: 310px !important;
 }
@@ -1948,7 +1955,7 @@ color: var(--second-color);
     direction: rtl;
     overflow-y: scroll;
 }
-@media (max-width: 767px)
+@media screen and (min-width : 250px) and (max-width: 767px)
 {
     .telegram-bots .bots {
         grid-template-columns: repeat(auto-fill,minmax(250px ,1fr));
