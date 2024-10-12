@@ -720,6 +720,12 @@ li.sites:hover a.web
 {
     height: 505px;
 }
+@media screen and (max-width:900px){
+    .explain .box.Telegram.bots:hover
+    {
+        height: 535px;
+    }
+}
 div.explain-page.container:hover .Special-heading.main-title.websites::before,
 div.wallets-page.container:hover .Special-heading.main-title.wallets::before,
 div.team-page.container:hover .Special-heading.main-title.T::before,
