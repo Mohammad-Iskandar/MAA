@@ -12,6 +12,22 @@
     --second-color: #556270;
     --special-heading-color:#d7d7d7;
     --main-transition: 0.5s ;
+    --box-bg-color : white;
+    --box-h1-color:#556270;
+    --box-shadow-color : #d7d7d7;
+    --border-color:#eeeeee00;
+    --footer-color : #556270;
+    --footer-icons-color : black;
+    --footer-i-color : black;
+    --footer-img-color : black;
+    --team-boxshadow-color:#d7d7d7;
+    --contactus-a-color:#556270;
+    --contactus-boxshadow-color:#556270;
+    --dark-mode-toggle-bg-color : #d7d7d7;
+    --dark-mode-toggle-before-color:black;
+    --russia-apps-before-color : #eee ;
+    --mega-menu-bg-color : #d4d4d4;
+    --webkit-scrollbar-track-color : #556270;
 }
 html
 {
@@ -24,7 +40,7 @@ html
 }
 ::-webkit-scrollbar-track
 {   
-    background: var(--second-color);
+    background: var(--webkit-scrollbar-track-color);
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb
@@ -37,12 +53,80 @@ html
 {
     background-color: #63bdb4;
 }
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
 body
 {
     font-family: 'Poppins', sans-serif;
     background-color:#5562701a;
     overflow-x: hidden;
 }
+/* start dark mode  */
+.dark-mode {
+    background-color: black;
+    --box-bg-color:black;
+    --second-color:white;
+    --box-h1-color:hsl(176, 56%, 55%);
+    --box-shadow-color : #d7d7d700;
+    --border-color: hsl(176, 56%, 55%);
+    --footer-color : black;
+    --footer-icons-color : #1b2327;
+    --footer-i-color : hsl(176, 56%, 55%);
+    --footer-img-color : white;
+    --team-boxshadow-color:hsl(176, 56%, 55%);
+    --contactus-a-color:black;
+    --contactus-boxshadow-color:black;
+    --dark-mode-toggle-bg-color : #272727;
+    --dark-mode-toggle-color : #272727;
+    --dark-mode-toggle-before-color:#e0e1e3;
+    --russia-apps-before-color : #373636 ; 
+    --mega-menu-bg-color : #353434;
+    --webkit-scrollbar-track-color : #353434;
+    color: white;
+
+}
+.dark-mode-toggle {
+    position: relative;
+    top: 0;
+    width: 122px;
+    height: 30px;
+    background-color: var(--dark-mode-toggle-bg-color);
+    background-image: none;
+    color: var(--second-color);
+    z-index: 1;
+    font-weight: 600;
+    font-size: 15px;
+}
+.dark-mode-toggle:hover 
+{   
+    transform: scale(1.02);
+    color: var(--main-color);
+    cursor: pointer;
+}
+.dark-mode-toggle::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--dark-mode-toggle-before-color);
+    width: 0px;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.dark-mode-toggle:hover::before
+    {width: 100%;
+}
+/* end dark mode  */
 @media (min-width:100px) and (max-width : 370px)
 {
     body
@@ -69,7 +153,8 @@ body
     {
         margin-left: 18px !important;
     }
-    .contact-page .contact .box .icons .whatsapp a, .contact-page .contact .box .icons .Telegram a, .contact-page .contact .box .icons .email a, .contact-page .contact .box .icons .instagram a
+    .contact-page .contact .box .icons .whatsapp a, .contact-page .contact .box .icons .Telegram a, .contact-page .contact .box .icons .email a, 
+    .contact-page .contact .box .icons .instagram a,.contact-page .contact .box .icons .youtube a
     {
         width: 210px !important;
     }
@@ -80,6 +165,7 @@ body
     footer p
     {
         font-size: 17px !important;
+        text-align: center;
     }
 }
 ul{
@@ -240,14 +326,23 @@ header
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 10px;
-    height: 67px;
+    height: 80px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgb(215 215 215 / 18%);
+    border-radius: 15px;
+    margin-top: 10px;
+    z-index: 10;
+    position: relative;
 }
 header .logo
 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 530px;
 }
 header .bar-icon{visibility: hidden;}
 header nav {position: relative; display: flex;}
@@ -271,7 +366,7 @@ header ul li a
 {
     header ul li a
     {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 header ul li a::after
@@ -302,10 +397,15 @@ header ul li a.active::after
 {
     width: 100%;
 }
-@media (max-width:600px) {
+@media (max-width:767px) {
     header
     {
         flex-direction: column;
+        height: 130px;
+    }
+    header .logo
+    {
+        margin-right: 0;
     }
     header nav 
     {
@@ -332,6 +432,16 @@ header ul li a.active::after
     {
         margin-right: 25px;
     }
+    .dark-mode-toggle 
+    {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .dark-mode-toggle::before 
+    {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 }
 /* nav-after-update */
 @media(min-width:501px)
@@ -342,7 +452,7 @@ header ul li a.active::after
     }
     li.sites .megamenu ul li
     {
-        padding: 13px !important;
+        padding: 13px 0px !important;
     }
     li.sites .megamenu ul li a
     {
@@ -375,7 +485,7 @@ li.sites .megamenu ul
     align-items: start;
     justify-content: center;
     z-index: -1;
-    background-color: #d4d4d4;
+    background-color: var(--mega-menu-bg-color);
     visibility: hidden;
     border-radius: 6px;
 
@@ -446,6 +556,7 @@ li.sites:hover a.web
     position: relative;
     right: -35px;
     top: -110px;
+    z-index: -1;
 }
 @media (max-width:900px)
 {
@@ -457,9 +568,9 @@ li.sites:hover a.web
     }
     .landing-page.container .intro
     {
-        transform: scale(0);
+        /* transform: scale(0);
         animation: scale 1s linear forwards !important;
-        left: 0 !important;
+        left: 0 !important; */
     }
     .landing-page .intro
     {
@@ -538,13 +649,15 @@ li.sites:hover a.web
 .wallets-page .wallets .wallet,
 .capatcha-tests .cap,
 .Games .games .game {
-    background-color: white;
+    background-color: var(--box-bg-color);
     border-radius: 10px;
-    box-shadow: 5px 5px 4px 1px var(--special-heading-color);
-    transition: var(--main-transition);
+    box-shadow: 5px 5px 4px 1px var(--box-shadow-color);
+    transition: 2s;
     position: relative;
     overflow: hidden;   
+    border: 3px solid var(--border-color);
 }
+
 .explain .box {
     height: 290px;
 }
@@ -552,7 +665,6 @@ li.sites:hover a.web
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -591,11 +703,11 @@ li.sites:hover a.web
     z-index: -1;
     content: '';
     position: absolute;
-    width: 102%;
-    height: 104%;
+    width: 100%;
+    height: 100%;
     background: var(--main-color);
-    left: -1px;
-    top: -1px;
+    left:0px;
+    top: 0px;
     border-radius: 10px;
 }
 
@@ -642,8 +754,9 @@ transition-delay: 0.2s;
 .capatcha-tests .cap:hover,
 .Games .games .game:hover
 { 
-    box-shadow: 4px 4px 6px 0px hsl(0deg 0.5% 60.42%);transform: scale(1.05);
+    box-shadow: 4px 4px 6px 0px hsl(0deg 0.5% 60.42%);transform: scale(1.02);
     direction: rtl;
+    transition: 0.5s;
 }
 .telegram-bots .bots .bot.Freedgbfaucetpay:hover{
     height: 410px;
@@ -694,7 +807,7 @@ transition-delay: 0.2s;
     font-size: 30px;
     position: relative;
     margin-top: 15px;
-    color: var(--second-color);
+    color: var(--box-h1-color);
 }
 .explain .box h1 
 {
@@ -737,7 +850,7 @@ transition-delay: 0.2s;
     transform: translateX(-50%);
     bottom: -23px;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid var(--box-bg-color);
 }   
 .telegram-bots .bots .bot:hover h1::after,
 .telegram-bots .bots .bot:hover h1::before,
@@ -871,10 +984,27 @@ transition-delay: 0.2s;
     {
         height: 565px;
     }
-    .wallets-page .wallets .wallet:nth-child(3):hover
+    .wallets-page .wallets .wallet.coinex:hover 
     {
-        height: 500px;
+        height: 590px !important;
     }
+    .wallets-page .wallets .wallet.Yobit:hover
+    {
+        height: 480px !important;
+    }
+    .wallets-page .wallets .wallet.trustwallet:hover
+    {
+        height: 500px !important;
+    }
+    .wallets-page .wallets .wallet.cwallet:hover
+    {
+        height: 530px !important;
+    }
+    .wallets-page .wallets .wallet.faucetpay:hover
+    {
+        height: 530px !important;
+    }
+
 }
 .wallets-page .wallets .wallet.trustwallet
 {
@@ -890,15 +1020,16 @@ transition-delay: 0.2s;
     background-color: var(--main-color);
     margin: auto;
     border-radius: 50px;
-    box-shadow: 5px 5px 4px 1px var(--special-heading-color);
+    box-shadow: 5px 5px 4px 1px var(--box-shadow-color);
     position: relative;
     display: flex;
-    transition: var(--main-transition);
+    transition: 3s;
 }
 .contact-page .contact .box:hover
 {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 5px 5px 4px 1px #838383;
+    transition: var(--main-transition);
 }
 @media (min-width:769px) and (max-width:900px)
 {
@@ -932,27 +1063,32 @@ transition-delay: 0.2s;
 .contact-page .contact .box .icons .whatsapp,
 .contact-page .contact .box .icons .Telegram,
 .contact-page .contact .box .icons .email,
+.contact-page .contact .box .icons .youtube,
 .contact-page .contact .box .icons .instagram
 {
     background: white;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 2px 3px 5px var(--second-color);
+    box-shadow: 2px 3px 5px var(--contactus-boxshadow-color);
     min-width: 400px;
     transition: var(--main-transition);
 }
 .contact-page .contact .box .icons .whatsapp a,
 .contact-page .contact .box .icons .Telegram a,
 .contact-page .contact .box .icons .email a,
+.contact-page .contact .box .icons .youtube a,
 .contact-page .contact .box .icons .instagram a
 {
-    color: var(--second-color);
+    color: var(--contactus-a-color);
     width: 400px;
-    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
 .contact-page .contact .box .icons .whatsapp:hover,
 .contact-page .contact .box .icons .Telegram:hover,
 .contact-page .contact .box .icons .email:hover,
+.contact-page .contact .box .icons .youtube:hover,
 .contact-page .contact .box .icons .instagram:hover
 {
     transform: scale(1.05);
@@ -960,6 +1096,7 @@ transition-delay: 0.2s;
 .contact-page .contact .box .icons .whatsapp span i,
 .contact-page .contact .box .icons .Telegram span i,
 .contact-page .contact .box .icons .email span i,
+.contact-page .contact .box .icons .youtube span i,
 .contact-page .contact .box .icons .instagram span i
 {
     margin-right: 10px;
@@ -980,14 +1117,26 @@ transition-delay: 0.2s;
 {
     color: #F56040;
 }
+.contact-page .contact .box .icons .youtube:hover span i 
+{
+    color: #ff0000;
+}
+.contact-page .contact .box .icons .youtube a span.new 
+{
+    position: relative;
+    left: 65%;
+    color: #d9d9d9;
+    font-size: 16px;
+    font-weight: bold;
+}
 /* end Contact page */
 /* start footer */
 footer
 {
-    background-color: var(--second-color);
-    height: 280px;
+    background-color: var(--footer-color);
     display: flex;
     flex-direction: column;
+    border-top: 3px solid var(--border-color);
 }
 @media (min-width:700px) and (max-width:900px)
 {
@@ -1004,6 +1153,8 @@ footer .mma-info
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
 }
 footer .mma-info img 
 {   
@@ -1020,7 +1171,7 @@ footer .mma-info .icons
 }
 footer .mma-info .icons i 
 {
-    background-color: #000000db;
+    background-color: var(--footer-icons-color);
     padding: 15px;
     color: var(--special-heading-color);
     font-size: 20px;
@@ -1035,6 +1186,11 @@ footer .mma-info .icons i.Telegram:hover
 footer .mma-info .icons i.instagram:hover
 {
     color: #F56040;
+    transform: scale(1.05);
+}
+footer .mma-info .icons i.youtube:hover
+{
+    color: #ff0000;
     transform: scale(1.05);
 }
 footer .mma-info .thanks p
@@ -1054,6 +1210,11 @@ footer .me-info
 footer .me-info .line 
 {
     display: flex;
+    transition: var(--main-transition);
+}
+footer .me-info .line:hover
+{
+    padding-left: 5px ;
 }
 footer .me-info .line:nth-child(3) .info
 {
@@ -1063,6 +1224,7 @@ footer .me-info .line:nth-child(3) .info
 footer .me-info .line i 
 {
     margin-right: 10px;
+    color: var(--footer-i-color);
 }
 footer .foot .img{
     display: flex;
@@ -1075,7 +1237,7 @@ footer .foot .img img
     width: 70px;
     height: 70px;
     border-radius: 10px;
-    border: 4px solid black;
+    border: 4px solid var(--footer-img-color);
     transition: var(--main-transition);
 }
 footer .foot .img img:hover
@@ -1106,19 +1268,19 @@ footer p i {
 {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 5px 5px 4px 1px var(--special-heading-color);
+    box-shadow: 3px 1px 4px 1px var(--team-boxshadow-color);
     display: flex;
     flex-direction: row;
     width: 700px;
     margin: auto;
     overflow-x: hidden;
     position: relative;
-    bottom: -373%;
     transition: var(--main-transition);
 }
 .team-page .team .box:hover
 {
     transform: scale(1.05);
+    transition: var(--main-transition);
 
 }
 .team-page .team .box:hover img
@@ -1145,7 +1307,8 @@ footer p i {
     border-right: 1px solid var(--second-color);
     gap: 50px;
     flex: 1;
-    padding: 0px 10px
+    padding: 0px 10px;
+    background-color: var(--box-bg-color);
 }
 .team-page .team .box .info h1
 {
@@ -1167,8 +1330,8 @@ footer p i {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 10px;
+    background-color: var(--box-bg-color);
 }
 .team-page .team .box .icons a {
 color: var(--second-color);
@@ -1270,7 +1433,7 @@ color: var(--second-color);
     {
         flex-direction: column;
         width:350px;
-        height: 740px;
+        height: 770px;
         margin: auto;
     }
     .contact-page .contact .box img
@@ -1283,11 +1446,11 @@ color: var(--second-color);
     {
         width: 320px;
     }
-    .contact-page .contact .box .icons .whatsapp, .contact-page .contact .box .icons .Telegram, .contact-page .contact .box .icons .email, .contact-page .contact .box .icons .instagram
+    .contact-page .contact .box .icons .whatsapp, .contact-page .contact .box .icons .Telegram, .contact-page .contact .box .icons .email, .contact-page .contact .box .icons .instagram ,.contact-page .contact .box .icons .youtube
     {
         min-width: 200px;
     }
-    .contact-page .contact .box .icons .whatsapp a, .contact-page .contact .box .icons .Telegram a, .contact-page .contact .box .icons .email a, .contact-page .contact .box .icons .instagram a
+    .contact-page .contact .box .icons .whatsapp a, .contact-page .contact .box .icons .Telegram a, .contact-page .contact .box .icons .email a, .contact-page .contact .box .icons .instagram a , .contact-page .contact .box .icons .youtube a
     {
         width: 300px;
     }
@@ -1360,16 +1523,61 @@ color: var(--second-color);
     padding-bottom: 40px;
 }
 .explanation .cont .box {
-    background-color: white;
+    background-color: var(--box-bg-color);
     border-radius: 10px;
     box-shadow: 3px 3px 4px 1px var(--special-heading-color);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 900px;
     margin: auto;
     min-height: 307.26px;
-    border: 3px solid var(--main-color);
+    border: 2px solid var(--main-color);
     overflow-x: hidden;
+    transition: 1s;
+}
+.explanation .cont .box h1 
+{
+    margin: 20px auto;
+    color: var(--second-color);
+    position: relative;
+    transition: var(--main-transition);
+}
+.explanation .cont .box:hover h1 
+{
+    color: var(--main-color);
+    transition: var(--main-transition);
+}
+.explanation .cont .box h1::before
+{
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    height: 3px;
+    width: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 5px;
+    transition: var(--main-transition);
+}
+.explanation .cont .box h1::after
+{
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    height: 12px;
+    width: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -23px;
+    border-radius: 50%;
+    border: 4px solid var(--box-bg-color);
+    transition: var(--main-transition);
+}
+.explanation .cont .box:hover h1::before, 
+.explanation .cont .box:hover h1::after
+{
+    background-color: var(--main-color);
     transition: var(--main-transition);
 }
 .explanation .cont .box.aviso
@@ -1379,23 +1587,21 @@ color: var(--second-color);
 .explanation .cont .box:hover{
     transform: scale(1.05) !important;
     z-index: 1000;
-    box-shadow: 3px 3px 4px 1px #868585;
+    box-shadow: 3px 3px 4px 1px #86858526;
+    transition: var(--main-transition);
 }
 .explanation .cont .box img{
     width: 249px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     filter: grayscale(1);
     transition: var(--main-transition);
     margin: auto;
-    border-right: 1px solid #eee;
-    height: 307px;
+    height: 249px;
+    border: 5px solid #eee;
+    margin-left: 5px;
+    border-radius: 10px;
 }
 .explanation .cont .box:hover img{
     filter:grayscale(0) ;
-}
-.explanation .cont .box .info{
-    border-right: 1px solid #eee;
 }
 .explanation .cont .box .info h1{
     margin: 10px auto;
@@ -1407,28 +1613,42 @@ color: var(--second-color);
 .explanation .cont .box .info p{
     line-height: 1.5;
     color: var(--second-color);
-    width: 470px;
     margin-top: 27px;
-    margin-bottom: 27px;
     padding: 0px 10px;
     direction: rtl;
     min-height: 120.04px;
     font-size: 19px;
 }
-.explanation .cont .box .info .apps
+.explanation .cont .box .apps
 {
     display: flex; 
     align-items: center; 
     justify-content: space-between;
     flex-direction: row-reverse; 
     color:var(--second-color);
-    width: 470px;
     margin-top: 27px;
-    margin-bottom: 22px;
     padding: 0px 10px;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     height: 30px;
+    position: relative;
+    font-weight: 600;
+}
+.explanation .cont .box .apps::before 
+{
+    content: "";
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    background-color: var(--russia-apps-before-color);
+    z-index: -1;
+    transition: 1s;
+    transform: translateX(-50%);
+}
+.explanation .cont .box .apps:hover::before
+{
+    width: 100%;
 }
 .explanation .cont .box .info .sub
 {
@@ -1453,23 +1673,40 @@ color: var(--second-color);
     gap: 10px;
     color: var(--second-color);
 }
-.explanation .cont .box:hover .info .sub .subb i {
-    position: relative;
-    animation: left-move 0.5s infinite linear;
-}
 @keyframes left-move {
     0%{left:0;}
     50%{left: -1px;}
     100%{left:-2px;}
-    
+}
+.explanation .cont .box .intro 
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
 }
 .explanation .cont .box .see
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: space-evenly;
-    gap: 10px;
     margin-left: -4px;
+    height: 110px;
+}
+.explanation .cont .box .sub 
+{
+    font-size: 12px;
+}
+.explanation .cont .box .sub .subb 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+}
+.explanation .cont .box .sub .subb i 
+{
+    transform: rotate(270deg);
 }
 .explanation .cont .box .see .s1
 {
@@ -1477,8 +1714,30 @@ color: var(--second-color);
     flex-direction: column;
     align-items: center;
     color: var(--second-color);
-    justify-content: space-evenly;
-    gap: 12px;
+    width: 100%;
+    gap:12px;
+    transition: 0.5s;
+    position: relative;
+}
+.explanation .cont .box .see .s1::before
+{
+    content: "";
+    position: absolute;
+    background-color: var(--russia-apps-before-color);
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.explanation .cont .box .see .s1:hover::before
+{
+    width: 100%;
+}
+.explanation .cont .box .see .s1:not(:first-child)
+{
+    border-right: 1px solid #eee;
 }
 .explanation .cont .box .see .s1 button.glow-on-hover
 {
@@ -1492,8 +1751,11 @@ color: var(--second-color);
     flex-direction: column-reverse;
     align-items: center;
     font-size: 17px;
+    margin-top: 20px;
 }
-.explanation .cont .box:hover .see .s1 span:first-child i 
+.explanation .cont .box:hover .see .s1 span:first-child i ,
+.explanation .cont .box .sub .subb i 
+
 {
     animation: up-down 0.5s infinite linear;
     position: relative;
@@ -1523,17 +1785,31 @@ color: var(--second-color);
     }
     .explanation .cont .box .see 
     {
-        margin-left: 10px;
+        flex-direction: column;
+        height: 280px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .explanation .cont .box .see .s1 span:first-child
+    {
+        margin-top: 0px;
+    }
+    .explanation .cont .box .sub .subb 
+    {
+        margin: 0 6px;
+        flex-direction: row;
+        width: 210px;
+        justify-content: space-between;
+    }
+    .explanation .cont .box .sub .subb i 
+    {
+        transform: rotate(0deg);
     }
     .explanation .cont .box img
     {
-        border-right: none;
-        width: 350px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 0px;   
-        margin-bottom: 30px;
-        border-bottom: 1px solid #eee;
+        width: 330px;
+        margin: 30px auto;
     }
     .explanation .cont .box.getlike img
     {
@@ -1556,11 +1832,12 @@ color: var(--second-color);
         width: fit-content;
         padding: 0px 20px;
         direction: rtl;
+        text-align: center;
     }
-    .explanation .cont .box .info .apps
+    .explanation .cont .box .apps
     {
-        width: fit-content;
-        gap: 90px;
+        font-size: 13px;
+        justify-content: space-between;
     }
     .explanation .cont .box .see  .proof
     {
@@ -1584,13 +1861,22 @@ color: var(--second-color);
         flex-direction: row-reverse;
         padding: 10px 0px;
     }
+    .explanation .cont .box .see .s1::before 
+    {
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
     .explanation .cont .box .see .s1 span:first-child
     {
         flex-direction: row;
         font-size: 18px;
         width: 210px;
         text-align: right;
-        padding-right: 5px;
+        margin: 0 6px;
+    }
+    button a 
+    {
+        font-size: 17px;
     }
     .explanation .cont .box .see .s1 span:first-child i::before 
     {
@@ -1599,6 +1885,10 @@ color: var(--second-color);
     .explanation .cont .box:hover .see .s1 span:first-child i 
     {
         animation-name: left-move;
+    }
+    .explanation .cont .box .intro
+    {
+        flex-direction: column;
     }
 }
 /* end russia page */
@@ -1614,7 +1904,6 @@ color: var(--second-color);
 .telegram-bots .bots .bot
 {
     height: 300px;
-    transition: var(--main-transition);
 }
 .telegram-bots .bots .bot:hover
 {
@@ -1673,24 +1962,28 @@ color: var(--second-color);
     padding-left: 50px;
 }
 .usertesting-page .usertesting .user{
-    background-color: white;
+    background-color: var(--box-bg-color);
     border-radius: 10px;
-    box-shadow: 5px 5px 4px 1px var(--special-heading-color);
+    box-shadow: 5px 5px 4px 1px var(--box-shadow-color);
     transition: var(--main-transition);
     overflow: hidden;
     height: 300px;
     transition: var(--main-transition);
-    
+    border: 5px solid var(--border-color);
+}
+.usertesting-page .usertesting .user::-webkit-scrollbar
+{
+    width: 0px;
 }
 .usertesting-page .usertesting .user:hover
 {
     transform: scale(1.05);
-    height: 630px;
+    height: 640px;
     box-shadow: 4px 4px 6px 0px hsl(0deg 0.5% 60.42%)   
 }
 .usertesting-page .usertesting .user.userf:hover
 {
-    height: 500px;
+    height: 510px;
 }
 .usertesting-page .usertesting .user.val:hover
 {
@@ -1730,7 +2023,7 @@ color: var(--second-color);
     font-size: 30px;
     position: relative;
     margin-top: 5px;
-    color: var(--second-color);
+    color: var(--box-h1-color);
 }
 .usertesting-page .usertesting .user h1::before
 {
@@ -1755,7 +2048,7 @@ color: var(--second-color);
     transform: translateX(-50%);
     bottom: -23px;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid var(--box-bg-color);
 }
 .usertesting-page .usertesting .user:hover h1::after,
 .usertesting-page .usertesting .user:hover h1::before
@@ -1926,6 +2219,7 @@ color: var(--second-color);
     text-align: center;
     color: white;
     margin: 50px 0 70px;
+    transition: 2s;
 }
 .quote::before {
     content: '';
@@ -1987,9 +2281,10 @@ color: var(--second-color);
 /* landing-page-after-updates */
 .landing-page.container .intro
 {
-    left: -100%;
+    /* left: -100%;
     animation: left 2s linear;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+    transition: 2s;
 }
 @keyframes left {
     from{left: -100%;}
@@ -2007,8 +2302,9 @@ color: var(--second-color);
 }
 .landing-page.container img.land
 {
-    animation: right 2s linear , upanddown 2s linear infinite 2s ;
-    animation-fill-mode: forwards;
+    /* animation: right 2s linear , upanddown 2s linear infinite 2s ;
+    animation-fill-mode: forwards; */
+    transition: 2s;
 }
 /* contact_us_and_team_and_wallets_after_update */
 @media (max-width : 595px) {
@@ -2034,29 +2330,17 @@ color: var(--second-color);
 {
     overflow-y: hidden;
 }
-.team .box.Mohammad
-{
-    animation: team_box_animation_ 2s linear 1; 
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-.team .box.Ahmad
-{
-    animation: team_box_animation_ 2s linear 1; 
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-}
+.team .box.Mohammad,
+.team .box.Ahmad,
 .team .box.Alhussien
 {
-    animation: team_box_animation_ 2s linear 1; 
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
+    transition: 2s;
 }
 .team .box.Thaer
 {
-    animation: team_box_animation_ 2s linear 1; 
+    /* animation: team_box_animation_ 2s linear 1; 
     animation-delay: 4s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 @keyframes scale
 {
@@ -2065,95 +2349,41 @@ color: var(--second-color);
 }
 .Special-heading.main-title.T
 {
-    animation: scale 1s linear ;
+    
 }
 .Special-heading.main-title.T +p
 {
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+    transition: 2s;
 }
 /* ContactUS */
 .Special-heading.main-title.contact
 {
-    animation: scale 1s linear ;
+    /* animation: scale 1s linear ; */
 }
 .Special-heading.main-title.contact+p{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+    transition: 2s;
 }
 .contact.container{
-    transform: scale(0);
+    /* transform: scale(0);
     animation: scale 1s linear;
     animation-delay: 2s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
     padding-left: 6px !important;
 }
 /* wallets */
-.Special-heading.main-title.wallets
-{
-    animation: scale 1s linear ;
-}
 .Special-heading.main-title.wallets+p
 {
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+    transition: 2s;
 }
-.wallets-page .wallets .wallet.payeer
+.wallets-page .wallets .wallet.coinex:hover  
 {
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-}
-.wallets-page .wallets .wallet.tonkeeper
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
-}
-.wallets-page .wallets .wallet.faucetpay
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 5s;
-}
-.wallets-page .wallets .wallet.Yobit
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 6s;
-}
-.wallets-page .wallets .wallet.trustwallet
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 7s;
-}
-.wallets-page .wallets .wallet.cwallet
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 8s;
+    height: 570px;
 }
 /* end_of_contact_us_and_team_and_wallets_after_update */
 /* Russain-site-after-updates */
 .explanation .cont .box.soc
 {
-    min-height: 358.26px;
-    /* transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards; */
+    min-height: 385.26px;
 }
 .explanation .cont .box.soc img
 {
@@ -2164,190 +2394,37 @@ color: var(--second-color);
 {
     .explanation .cont .box.soc img
     {
-        margin-top: 140px;
+        margin: auto;
     }
 }
-/* .explanation .cont .box.visit
-{ transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 6s;
-} */
 .explanation .cont .box.visit img
 {
     height: 70px;
     margin: auto;
 }
-/* .explanation .cont .box.teaser
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 7s;
-} */
+
 .explanation .cont .box.teaser img
 {
     height: 90px;
     background-color: var(--second-color);
 }
-/* .explanation .cont .box.vktarget
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-.explanation .cont .box.vkserfing
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-}
-.explanation .cont .box.aviso
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-}
-.explanation .cont .box.unu
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-}
-.explanation .cont .box.seosprint
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 5s;
-    animation-fill-mode: forwards;
-}
-.explanation .cont .box.payup
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 8s;
-    animation-fill-mode: forwards;
-}
-.explanation .cont .box.getlike
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 9s;
-    animation-fill-mode: forwards;
-}
-.explanation .cont .box.buxmoney
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-delay: 10s;
-    animation-fill-mode: forwards;
-} */
 /* End-Russain-site-after-updates */
 /* usertesting-after-updates */
-.usertesting .user.usert
-{   
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-}
-.usertesting .user.userf
-{   
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-.usertesting .user.val
-{   
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
-.usertesting .user.res
-{   
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-}
-.usertesting .user.unknown
+.selling-pictures .pic
 {
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
+    margin: 0 20px;
+    transition: 1s;
 }
-/* end-usertesting-after-updates */  
-/* selling-photos-after-updates */
-.selling-pictures .pic.shutter
+.selling-pictures .pic:hover
 {
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
+    transition: var(--main-transition);
 }
-.selling-pictures .pic.unknown
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-/* end-selling-photos-after-updates */
-/* writing-articles-after-updates */
-.write-article .article.medium
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-}
-.write-article .article.unknown
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-/*end-writing-articles-after-updates */
-/*telegram-bots-after-updates */
 
-.telegram-bots .bot.mining_bots
+/* end-selling-photos-after-updates */
+/*telegram-bots-after-updates */
+.telegram-bots .bot.adflyer::-webkit-scrollbar
 {
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-}
-.telegram-bots .bot.squad-trx
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s; 
-}
-.telegram-bots .bot.gmail
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 2s; 
-}
-.telegram-bots .bot.adflyer
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-}
-.telegram-bots .bot.unknown
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
+    width: 0px;
 }
 /*end-telegram-bots-after-updates */
 /* start-capatcha-page */
@@ -2355,70 +2432,98 @@ color: var(--second-color);
 {
     margin-top: 50px;
 }
-.capatcha-tests .cap.twocapatcha{
-    direction: rtl;
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-}
-.capatcha-tests .cap.unknown{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s; 
-}
 /* end-capatcha-page */
 /* start games page */
 .Games
 {
     margin-top: 50px;
 }
-.Games .games .game.Freecash
-{
-    direction: rtl;
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    
-}
-.Games .games .game.testerup
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s; 
-}
 .Games .games .game.testerup:hover
 {
     height: 390px;
 }
-.Games .games .game.unknown
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 2s; 
-}
 /* end games page */
 /* Start givvy apps page */
-.givvy_apps .givvyapp.gsocial
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-}
-.givvy_apps .givvyapp.gvideos
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-.givvy_apps .givvyapp.unknown
-{
-    transform: scale(0);
-    animation: scale 1s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
 /* End givvy apps page */
+/* start new project sec */
+.new_project 
+{
+    background-image: url(../images/studying-with-coffee-8jtkje1s3d537a6h.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    margin-bottom: 100px;
+    transition: 2s;
+}
+.new_project::before
+{
+    content: "";
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: #00000094;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.new_project .paragraph 
+{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+.new_project h1 
+{
+    text-align: center;
+    color: wheat;
+    text-shadow: 0px 8px 12px wheat;
+}
+.new_project .courseshub p 
+{
+    color: wheat;
+    font-size: 19px;
+    width: 500px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.new_project .contact 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+.new_project .contact:hover
+{
+    background-color: wheat;
+}
+.new_project .contact:hover a 
+{
+    color: white;
+}
+.new_project .contact a
+{
+    color: wheat;
+    transition: var(--main-transition);
+}
+@media screen and (max-width:767px ) {
+    .new_project
+    {
+        height: 270px;
+    }
+    .new_project .courseshub p 
+    {
+        width: 380px;
+    }
+}
+/* end new project sec */
