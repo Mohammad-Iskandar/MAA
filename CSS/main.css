@@ -2226,6 +2226,10 @@ color: var(--second-color);
 {
     width: 400px !important;
 }
+.selling-pictures .pictures .pic.fhpx:hover
+{
+    height: 500px !important;
+}
 }
 /* End sell photos page */
 /* start quote */
