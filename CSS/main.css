@@ -2469,7 +2469,8 @@ color: var(--second-color);
 /* Start givvy apps page */
 /* End givvy apps page */
 /* start new project sec */
-.new_project 
+.new_project,
+.new_services 
 {
     background-image: url(../images/studying-with-coffee-8jtkje1s3d537a6h.jpg);
     position: relative;
@@ -2484,7 +2485,13 @@ color: var(--second-color);
     margin-bottom: 100px;
     transition: 2s;
 }
-.new_project::before
+.new_services {
+    background-image: url(../images/newServicesMV.jpg) !important;
+    border: 3px solid var(--main-color);
+    background-position-y: -20px;
+}
+.new_project::before,
+.new_services::before
 {
     content: "";
     left: 0;
@@ -2495,19 +2502,29 @@ color: var(--second-color);
     width: 100%;
     height: 100%;
 }
-.new_project .paragraph 
+.new_project .paragraph ,
+.new_services .paragraph 
 {
     color: white;
     font-size: 30px;
     font-weight: 600;
 }
-.new_project h1 
+.new_services .paragraph {
+    text-shadow: 3px 4px 12px var(--border-color);
+}
+.new_project h1 ,
+.new_services h1
 {
     text-align: center;
     color: wheat;
     text-shadow: 0px 8px 12px wheat;
 }
-.new_project .courseshub p 
+.new_services h1{
+    color: white;
+    text-shadow: none;
+}
+.new_project .courseshub p ,
+.new_services .courseshub p
 {
     color: wheat;
     font-size: 19px;
@@ -2515,7 +2532,11 @@ color: var(--second-color);
     text-align: center;
     margin-bottom: 10px;
 }
-.new_project .contact 
+.new_services .courseshub p{
+    color: white;
+}
+.new_project .contact ,
+.new_services .contact
 {
     display: flex;
     justify-content: center;
@@ -2530,23 +2551,44 @@ color: var(--second-color);
 {
     background-color: wheat;
 }
-.new_project .contact:hover a 
+.new_services .contact:hover
+{
+background-color:   var(--main-color);
+}
+.new_project .contact:hover a,
+.new_services .contact:hover a
 {
     color: white;
 }
-.new_project .contact a
+.new_project .contact a,
+.new_services .contact a
 {
     color: wheat;
     transition: var(--main-transition);
 }
+.new_services .contact a{
+    color: var(--main-color);
+    font-size: 18px;
+    font-style: italic;
+}
 @media screen and (max-width:767px ) {
-    .new_project
+    .new_project ,
+    .new_services
     {
         height: 270px;
     }
-    .new_project .courseshub p 
+    .new_project .courseshub p ,
+    .new_services .courseshub p 
     {
         width: 380px;
+    }
+    .new_services
+    {
+        background-position-y: bottom;
+    }
+    .new_services h1
+    {
+        font-size: 25px;
     }
 }
 /* end new project sec */
