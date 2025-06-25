@@ -673,6 +673,8 @@ a{text-decoration: none;}
 {
     .land {
         height: 428px;
+        margin: auto;
+        width: fit-content;
     }
     .land .intro
     {
@@ -778,7 +780,7 @@ a{text-decoration: none;}
     }
     .land .intro 
     {
-        font-size: 31px;
+        font-size: 28px !important;
     }
 }
 @media (min-width : 767px) and (max-width : 1200px){
@@ -1508,7 +1510,7 @@ transition-delay: 0.2s;
 }
 .wallets-page .wallets .wallet:nth-child(2):hover
 {
-    height: 320px !important;
+    height: 605px !important;
 }
 .wallets-page .wallets .wallet:nth-child(3)
 {
@@ -1559,7 +1561,7 @@ transition-delay: 0.2s;
     }
     .wallets-page .wallets .wallet:nth-child(1):hover
     {
-        height: 540px;
+        height: 580px;
     }
     .wallets-page .wallets .wallet.coinex:hover 
     {
@@ -1567,7 +1569,7 @@ transition-delay: 0.2s;
     }
     .wallets-page .wallets .wallet.Yobit:hover
     {
-        height: 480px !important;
+        height: 510px !important;
     }
     .wallets-page .wallets .wallet.trustwallet:hover
     {
@@ -1579,11 +1581,11 @@ transition-delay: 0.2s;
     }
     .wallets-page .wallets .wallet.faucetpay:hover
     {
-        height: 530px !important;
+        height: 560px !important;
     }
     .explain .box button a 
     {
-        bottom: 10px !important;
+        bottom: 5px !important;
     }
     .explain .box button
     {
@@ -1611,7 +1613,7 @@ transition-delay: 0.2s;
     }
     .wallets-page .wallets .wallet.shamcash:hover
     {
-        height:  470px !important;
+        height:  490px !important;
     }
     .wallets-page .wallets .wallet.coinex
     {
@@ -1619,11 +1621,11 @@ transition-delay: 0.2s;
     }
     .wallets-page .wallets .wallet.coinex:hover
     {
-        height: 610px !important;
+        height: 650px !important;
     }
     .wallets-page .wallets .wallet.Yobit
     {
-        height: 420px !important;
+        height: 450px !important;
     }
     .wallets-page .wallets .wallet.Yobit
     {
@@ -1631,11 +1633,11 @@ transition-delay: 0.2s;
     }
     .wallets-page .wallets .wallet.trustwallet
     {
-        height: 430px !important;
+        height: 460px !important;
     }
     .wallets-page .wallets .wallet.trustwallet:hover
     {
-        height: 490px !important;
+        height: 535px !important;
     }
     .wallets-page .wallets .wallet.cwallet:hover
     {
@@ -1647,12 +1649,30 @@ transition-delay: 0.2s;
     }
     .wallets-page .wallets .wallet.cwallet:hover
     {
-        height: 510px !important;
+        height: 556px !important;
     }
     .wallets-page
     {
         padding-top: 0;
     }
+    .wallets-page .wallets .wallet.payeer img,
+.wallets-page .wallets .wallet.tonkeeper img,
+.wallets-page .wallets .wallet.shamcash img,
+.wallets-page .wallets .wallet.coinex img,
+.wallets-page .wallets .wallet.faucetpay img,
+.wallets-page .wallets .wallet.Yobit img,
+.wallets-page .wallets .wallet.trustwallet img,
+.wallets-page .wallets .wallet.cwallet img
+{
+    width: -webkit-fill-available !important;
+
+}
+.wallets-page{
+    grid-column: 1/3;
+}
+.wallets-page .wallets .wallet.faucetpay {
+    height: 500px !important;
+}
 }
 /* end wallets page */
 /* end wallets  */
@@ -1996,7 +2016,7 @@ transition-delay: 0.2s;
     }
     .explanation .cont .box img
     {
-        width: 350px;
+        width: -webkit-fill-available;
     }
     .explanation .cont .box.getlike img
     {
@@ -2371,7 +2391,7 @@ transition-delay: 0.2s;
     position: relative;
     bottom: -10px;
     padding: 10px;
-    width: 170px;
+    width: 120px;
     height: 30px;
 }
 .usertesting-page .usertesting .user button a
@@ -2410,7 +2430,7 @@ transition-delay: 0.2s;
 }
 .dashboard .main.usertesting 
 {
-    grid-column: 1;
+    grid-column: 1/4;
 }
 .usertesting-page
 {
@@ -2426,11 +2446,11 @@ transition-delay: 0.2s;
 }
 .usertesting-page .usertesting .user
 {
-    height: 400px;
+    height: 480px;
 }
 .usertesting-page .usertesting .user:hover
 {
-    height: 500px;
+    height: 540px;
 }
 .usertesting-page .usertesting .user p
 {
@@ -2470,10 +2490,10 @@ transition-delay: 0.2s;
 @media (max-width:450px)
 {
     .freelance .fWeb.mostaql{
-        height: 500px !important;
+        height: 480px !important;
     }
     .freelance .fWeb.mostaql:hover{
-        height: 565px !important;
+        height: 535px !important;
     }
     .freelancing
     {
@@ -2611,9 +2631,17 @@ transition-delay: 0.2s;
 {
     height: 520px !important;
 }
-.write-article .articles .article button, .selling-pictures .pictures .pic button, .givvy_apps .givvy .givvyapp button, .telegram-bots .bots .bot button, .explain .box button, .wallets-page .wallets .wallet button, .capatcha-tests .cap button, .Games .games .game button, .freelancing .fWeb button
+.write-article .articles .article button, .selling-pictures .pictures .pic button, .givvy_apps .givvy .givvyapp button, .telegram-bots .bots .bot button, .capatcha-tests .cap button, .Games .games .game button, .freelancing .fWeb button
 {
     width: 130px !important;
+}
+.wallets-page .wallets .wallet button
+{
+    width: 100px !important;
+}
+.wallets-page .wallets .wallet.payeer
+{
+    height: 480px;
 }
 }
 /* End sell photos page */
@@ -2648,7 +2676,7 @@ transition-delay: 0.2s;
     }
     .write-article .articles .article:last-child
     {
-        height: 400px;
+        height: 380px;
     }
     .write-article .articles .article:last-child:hover
     {
@@ -3188,7 +3216,7 @@ transition-delay: 0.2s;
     {
         width: -webkit-fill-available;
         height: 110px;
-        background-position-y: -200px;
+        background-position-y: -215px;
     }
     .dashboard .head
     {
