@@ -1106,7 +1106,170 @@ transition: width 1s ease;
 /* start websites  */
 .dashboard .main.websites
 {
-    grid-template-columns: repeat(autofill(minmax(300px,1fr)));
+    grid-template-columns: minmax(500px, 1fr);
+}
+.websites .box h1 
+{
+    top: 0 !important;
+    margin-top: 5px !important;
+    color: white !important;
+}
+.websites .box:hover h1
+{
+    color: var(--box-h1-color) !important;
+}
+.websites .box p {
+    margin-top: 30px !important;
+    min-height: 100px !important;
+    font-size: 18px;
+}
+.websites .box button 
+{
+    width: 170px !important;
+}
+.websites .russia 
+{
+    height: 420px !important;
+}
+.websites .russia:hover 
+{
+    height: 510px !important;
+}
+.websites .usertesting 
+{
+    height: 420px !important;
+}
+.websites .usertesting:hover 
+{
+    height: 480px !important;
+}
+.websites .Freelance 
+{
+    height: 415px !important;
+}
+.websites .Freelance:hover 
+{
+    height: 480px !important;
+}
+.websites .selling 
+{
+    height: 420px !important;
+}
+.websites .selling:hover 
+{
+    height: 480px !important;
+}
+.websites .write 
+{
+    height: 430px !important;
+}
+.websites .write:hover 
+{
+    height: 475px !important;
+}
+.websites .capatcha 
+{
+    height: 420px !important;
+}
+.websites .capatcha:hover 
+{
+    height: 480px !important;
+}
+.websites .games 
+{
+    height: 420px !important;
+}
+.websites .games:hover 
+{
+    height: 480px !important;
+}
+.websites .givvy
+{
+    height: 410px !important;
+}
+.websites .givvy:hover 
+{
+    height: 480px !important;
+}
+@media (max-width:767px)
+{
+.websites .box h1 
+{
+    top: 0 !important;
+    margin-top: 5px !important;
+}
+.websites .box p {
+    margin-top: 30px !important;
+    min-height: 100px !important;
+}
+.websites .box button 
+{
+    width: 170px !important;
+}
+.websites .russia 
+{
+    height: 450px !important;
+}
+.websites .russia:hover 
+{
+    height: 510px !important;
+}
+.websites .usertesting 
+{
+    height: 460px !important;
+}
+.websites .usertesting:hover 
+{
+    height: 510px !important;
+}
+.websites .Freelance 
+{
+    height: 480px !important;
+}
+.websites .Freelance:hover 
+{
+    height: 530px !important;
+}
+.websites .selling 
+{
+    height: 420px !important;
+}
+.websites .selling:hover 
+{
+    height: 480px !important;
+}
+.websites .write 
+{
+    height: 480px !important;
+}
+.websites .write:hover 
+{
+    height: 530px !important;
+}
+.websites .capatcha 
+{
+    height: 420px !important;
+}
+.websites .capatcha:hover 
+{
+    height: 480px !important;
+}
+.websites .games 
+{
+    height: 420px !important;
+}
+.websites .games:hover 
+{
+    height: 480px !important;
+}
+.websites .givvy
+{
+    height: 410px !important;
+}
+.websites .givvy:hover 
+{
+    height: 480px !important;
+}
 }
 /* end websites  */
 /* start explaining websites page */
@@ -1118,7 +1281,7 @@ transition: width 1s ease;
 .Games .games 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(350px ,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(360px ,1fr));
     gap:60px;
 }
 @media (max-width:767px)
@@ -1129,9 +1292,7 @@ transition: width 1s ease;
     padding-right: 0px;
 }
 }
-.explain {
-    grid-template-columns: repeat(auto-fill,minmax(330px ,1fr)) !important;
-}
+
 .write-article .articles .article,
 .selling-pictures .pictures .pic,
 .givvy_apps .givvy .givvyapp,
@@ -1510,7 +1671,7 @@ transition-delay: 0.2s;
 }
 .wallets-page .wallets .wallet:nth-child(2):hover
 {
-    height: 605px !important;
+    height: 315px !important;
 }
 .wallets-page .wallets .wallet:nth-child(3)
 {
@@ -1522,11 +1683,11 @@ transition-delay: 0.2s;
 }
 .wallets-page .wallets .wallet.coinex
 {
-    height: 290px !important;
+    height: 250px !important;
 }
 .wallets-page .wallets .wallet.coinex:hover
 {
-    height: 350px !important;
+    height: 310px !important;
 }
 .wallets-page .wallets .wallet.faucetpay
 {
@@ -1542,7 +1703,7 @@ transition-delay: 0.2s;
 }
 .wallets-page .wallets .wallet.trustwallet
 {
-    height: 310px !important;
+    height: 255px !important;
 }
 .wallets-page .wallets .wallet.cwallet:hover
 {
@@ -2279,7 +2440,7 @@ transition-delay: 0.2s;
 .usertesting-page .usertesting 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(350px ,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(360px ,1fr));
     gap:60px;
 }
 .usertesting-page .usertesting .user{
@@ -2464,7 +2625,7 @@ transition-delay: 0.2s;
 }
 .freelance{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 60px;
 }
 .freelance .fWeb
@@ -2604,12 +2765,13 @@ transition-delay: 0.2s;
 }
 .selling-pictures .pictures .pic.EyeEm 
 {
-    height: 325px;
+    height: 250px;
 }
 .selling-pictures .pictures .pic.Dreamstine
 {
-    height: 350px;
+    height: 240px;
 }
+
 @media (max-width:767px)
 {
     .selling-pictures .pictures
