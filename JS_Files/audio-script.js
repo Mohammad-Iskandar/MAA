@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     // العناصر الأساسية
     const audio = document.getElementById('main-audio');
-    const playPauseBtn = document.querySelector('.play-pause');
-    const playIcon = document.querySelector('.play-icon');
-    const pauseIcon = document.querySelector('.pause-icon');
-    const progressBar = document.querySelector('.progress-bar');
-    const currentTimeEl = document.querySelector('.current-time');
-    const durationEl = document.querySelector('.duration');
-    const volumeBtn = document.querySelector('.volume-btn');
-    const volumeIcon = document.querySelector('.volume-icon');
-    const muteIcon = document.querySelector('.mute-icon');
+    const playPauseBtn = document.querySelector('.custom-audio-player .play-pause');
+    const playIcon = document.querySelector('.custom-audio-player .play-icon');
+    const pauseIcon = document.querySelector('.custom-audio-player .pause-icon');
+    const currentTimeEl = document.querySelector('.custom-audio-player .current-time');
+    const durationEl = document.querySelector('.custom-audio-player .duration');
     
     // حالة المدة الزمنية
     let audioDuration = 0;
@@ -50,33 +46,32 @@ document.addEventListener('DOMContentLoaded', function() {
         return false;
     }
 
+    // تحديث الوقت الحالي
+    function updateProgress() {
+        // تحديث الوقت الحالي دائماً
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+    }
+
     // إعداد مستمعي الأحداث
     playPauseBtn.addEventListener('click', togglePlayPause);
-    progressBar.addEventListener('input', setProgress);
-    volumeBtn.addEventListener('click', toggleMute);
 
     // الأحداث الصوتية
-    audio.addEventListener('timeupdate', function() {
-        if (audio.duration) {
-            const percent = (audio.currentTime / audio.duration) * 100;
-            progressBar.value = percent;
-            currentTimeEl.textContent = formatTime(audio.currentTime);
-            
-            // Debugging:
-            console.log(`Time: ${audio.currentTime}, Progress: ${percent}%`);
-        }
-    });
+    audio.addEventListener('timeupdate', updateProgress);
+    
     audio.addEventListener('ended', function() {
         playIcon.style.display = 'block';
         pauseIcon.style.display = 'none';
-        progressBar.value = 0;
         currentTimeEl.textContent = '0:00';
     });
-    audio.addEventListener('loadedmetadata', checkDuration);
+    
+    audio.addEventListener('loadedmetadata', function() {
+        checkDuration();
+    });
+    
     audio.addEventListener('canplay', checkDuration);
 
     // تهيئة أولية للصوت
-    audio.volume = 0.8; // مستوى صوت افتراضي
+    audio.volume = 0.8;
 
     // حل بديل للتحقق من المدة
     const durationCheckInterval = setInterval(() => {
