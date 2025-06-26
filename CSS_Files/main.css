@@ -2594,6 +2594,22 @@ transition-delay: 0.2s;
 {
     bottom: 0;
 }
+.selling-pictures .pictures .pic.shutter img,
+.selling-pictures .pictures .pic.fhpx img,
+.selling-pictures .pictures .pic.Clickasnap img,
+.selling-pictures .pictures .pic.EyeEm img,
+.selling-pictures .pictures .pic.Dreamstine img
+{
+    width: 250px;
+}
+.selling-pictures .pictures .pic.EyeEm 
+{
+    height: 325px;
+}
+.selling-pictures .pictures .pic.Dreamstine
+{
+    height: 350px;
+}
 @media (max-width:767px)
 {
     .selling-pictures .pictures
@@ -2642,6 +2658,34 @@ transition-delay: 0.2s;
 .wallets-page .wallets .wallet.payeer
 {
     height: 480px;
+}
+.selling-pictures .pictures .pic.shutter img,
+.selling-pictures .pictures .pic.fhpx img,
+.selling-pictures .pictures .pic.Clickasnap img,
+.selling-pictures .pictures .pic.EyeEm img,
+.selling-pictures .pictures .pic.Dreamstine img
+{
+    width: -webkit-fill-available;
+}
+.selling-pictures .pictures .pic.Clickasnap:hover 
+{
+    height: 590px;
+}
+.selling-pictures .pictures .pic.EyeEm
+{
+    height: 575px;
+}
+.selling-pictures .pictures .pic.EyeEm:hover
+{
+    height: 635px;
+}
+.selling-pictures .pictures .pic.Dreamstine
+{
+    height: 620px;
+}
+.selling-pictures .pictures .pic.Dreamstine:hover
+{
+    height: 680px;
 }
 }
 /* End sell photos page */
