@@ -34,6 +34,10 @@
     --music-card-audio-bg :white;
     --audio-buttons-color :#ffffff85;
     --russian-box-shadow:3px 3px 4px 1px #a5a5a5;
+    --form-input-bg-color:white;
+    --form-bg-color:hsl(0deg 0% 88.34%);
+    --form-icons-bg-color:white;
+    --form-label-color : #898989;
 }
 body {
     display: flex;
@@ -89,6 +93,10 @@ a{text-decoration: none;}
     --russiansites-intro-bg :#f6f6f612;
     --music-card-audio-bg :#333333;
     --russian-box-shadow:3px 3px 4px 1px #3d3d3d;
+    --form-input-bg-color:#393939;
+    --form-bg-color:hsl(0deg 0% 10.2%);
+    --form-icons-bg-color:#393939;
+    --form-label-color:white;
 }
 .dark-mode-toggle {
     position: relative;
@@ -1433,15 +1441,18 @@ transition-delay: 0.2s;
     position: relative;
     filter: grayscale(1);
 }
-.explain .box img,
 .wallets-page .wallets .wallet img
 {
     width: 100%;
     height: 235px;
     border-top-left-radius: 10px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 10px;
     position: relative;
     filter: grayscale(1);
+}
+.explain .box img{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 .wallets-page .wallets .wallet.payeer img,
 .wallets-page .wallets .wallet.tonkeeper img,
@@ -1459,7 +1470,6 @@ transition-delay: 0.2s;
 .selling-pictures .pictures .pic:hover img,
 .givvy_apps .givvy .givvyapp:hover img,
 .telegram-bots .bots .bot:hover img, 
-.explain .box:hover img,
 .wallets-page .wallets .wallet:hover img,
 .capatcha-tests .cap:hover img,
 .Games .games .game:hover img,
@@ -2290,19 +2300,20 @@ transition-delay: 0.2s;
 {
     width: 750px;
     height: 400px;
-    background-color: var(--main-color);
+    background-color: var(--form-bg-color);
     margin: auto;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: 5px 5px 4px 1px var(--box-shadow-color);
     position: relative;
     display: flex;
     transition: 3s;
     direction: ltr;
+    border: 1px solid var(--main-color)!important;
 }
 .contact-page .contact .box:hover
 {
     transform: scale(1.02);
-    box-shadow: 3px 3px 4px 1px #2f2e2e;
+    box-shadow: 3px 3px 4px 1px #a9a8a8;
     transition: var(--main-transition);
 }
 @media (min-width:769px) and (max-width:900px)
@@ -2323,29 +2334,8 @@ transition-delay: 0.2s;
     height: 400px;
     position: relative;
     left: 0px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-}
-.contact-page .contact .box .icons
-{
-    DISPLAY: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    margin: auto;
-}
-.contact-page .contact .box .icons .whatsapp,
-.contact-page .contact .box .icons .Telegram,
-.contact-page .contact .box .icons .email,
-.contact-page .contact .box .icons .youtube,
-.contact-page .contact .box .icons .instagram
-{
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 2px 3px 5px var(--contactus-boxshadow-color);
-    min-width: 400px;
-    transition: var(--main-transition);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .contact-page .contact .box .icons .whatsapp a,
 .contact-page .contact .box .icons .Telegram a,
@@ -2409,26 +2399,35 @@ transition-delay: 0.2s;
     {
         flex-direction: column;
         width:350px;
-        height: 770px;
+        height: 810px;
         margin: auto;
     }
     .contact-page .contact .box img
     {
         width: 350px;
-        border-top-right-radius: 50px;
-        border-bottom-left-radius: 0 ;
     }
-    .contact-page .contact .box .icons
-    {
-        width: 320px;
+
+    .FormAndIcons {
+        display: flex ;
+        flex-direction: column !important;
+        gap: 30px;
+        margin: auto;
+        margin-left: auto !important;
     }
-    .contact-page .contact .box .icons .whatsapp, .contact-page .contact .box .icons .Telegram, .contact-page .contact .box .icons .email, .contact-page .contact .box .icons .instagram ,.contact-page .contact .box .icons .youtube
+    .FormAndIcons .icons
     {
-        min-width: 200px;
+        flex-direction: row !important;
+        right: 30px !important;
+        top: 20px !important;
+        width: 120% !important;
+        height: 50px !important;
     }
-    .contact-page .contact .box .icons .whatsapp a, .contact-page .contact .box .icons .Telegram a, .contact-page .contact .box .icons .email a, .contact-page .contact .box .icons .instagram a , .contact-page .contact .box .icons .youtube a
+    .contact-page .contact .box:hover .icons 
     {
-        width: 300px;
+        top: -20px !important;
+    }
+    .FormAndIcons {
+        margin: 20px auto 0 !important;
     }
 }
 /* end Contact page */
@@ -3430,3 +3429,101 @@ transition-delay: 0.2s;
     }
 }
 /* end music card  */
+/* start contact us form  */
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    transition: var(--main-transition);
+}
+label {
+    color: var(--form-label-color);
+    font-weight: bold;
+    font-style: italic;
+}
+input,textarea
+{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px var(--special-text-color);
+    padding: 3px 3px 3px 5px;
+    caret-color: var(--special-text-color);
+    width: 300px;
+    height: 30px;
+    background-color: var(--form-input-bg-color);
+}
+textarea
+{
+    max-width: 300px;
+    min-width: 300px;
+    height: 60px !important;
+    max-height: 100px;
+}
+form button.glow-on-hover
+{
+    width: 200px;
+    background-color: var(--sidebar-color) !important;
+    text-align: center;
+}
+form button.glow-on-hover:after
+{
+    background-color: var(--sidebar-color) !important;
+}
+.explain .box button
+{
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--menu-item-color) !important;
+    font-size: 18px;
+}
+.icons a 
+{
+    color: var(--menu-item-color) !important;
+    transition: var(--main-transition) !important;
+}
+.icons a:hover
+{
+    color: var(--main-color) !important;
+}
+input::placeholder,textarea::placeholder
+{
+    color: #d1d1d1;
+}
+.FormAndIcons
+{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: auto;    margin-left: 60px;
+}
+.FormAndIcons .icons
+{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        margin: auto;
+        background-color: var(--form-icons-bg-color);
+        position: relative;
+        right: -50px;
+        height: 400px;
+        width: 40px;
+        transition: var(--main-transition);
+}
+.contact-page .contact .box .icons .whatsapp, .contact-page .contact .box .icons .Telegram, .contact-page .contact .box .icons .email, .contact-page .contact .box .icons .youtube, .contact-page .contact .box .icons .instagram
+{
+    width: 30px;
+    font-size: 17px;
+}
+.contact-page .contact .box:hover .icons 
+{
+    right: -20px;
+}
+/* end contact us form  */
