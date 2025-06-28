@@ -1293,7 +1293,7 @@ transition: width 1s ease;
 .Games .games 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(360px ,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px ,1fr));
     gap:60px;
 }
 @media (max-width:767px)
@@ -1666,7 +1666,7 @@ transition-delay: 0.2s;
 }
 .wallets-page .wallets {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(370px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     gap:40px;
 }
 .wallets-page .wallets .wallet{
@@ -2315,7 +2315,7 @@ transition-delay: 0.2s;
 .contact-page{padding-bottom: 50px;}
 .contact-page .contact .box
 {
-    width: 750px;
+    width: 790px;
     height: 400px;
     background-color: var(--form-bg-color);
     margin: auto;
@@ -2454,7 +2454,7 @@ transition-delay: 0.2s;
 .usertesting-page .usertesting 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(360px ,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px ,1fr));
     gap:60px;
 }
 .usertesting-page .usertesting .user{
@@ -2639,7 +2639,7 @@ transition-delay: 0.2s;
 }
 .freelance{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 60px;
 }
 .freelance .fWeb
@@ -2870,7 +2870,7 @@ transition-delay: 0.2s;
 .write-article .articles 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(350px ,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px ,1fr));
     gap: 60px;
 }
 .write-article .articles .article
