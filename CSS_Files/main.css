@@ -1220,7 +1220,7 @@ transition: width 1s ease;
 }
 .websites .russia:hover 
 {
-    height: 510px !important;
+    height: 550px !important;
 }
 .websites .usertesting 
 {
@@ -1228,7 +1228,7 @@ transition: width 1s ease;
 }
 .websites .usertesting:hover 
 {
-    height: 510px !important;
+    height: 550px !important;
 }
 .websites .Freelance 
 {
@@ -1236,7 +1236,7 @@ transition: width 1s ease;
 }
 .websites .Freelance:hover 
 {
-    height: 530px !important;
+    height: 580px !important;
 }
 .websites .selling 
 {
@@ -1244,7 +1244,7 @@ transition: width 1s ease;
 }
 .websites .selling:hover 
 {
-    height: 480px !important;
+    height: 500px !important;
 }
 .websites .write 
 {
@@ -1252,7 +1252,7 @@ transition: width 1s ease;
 }
 .websites .write:hover 
 {
-    height: 530px !important;
+    height: 580px !important;
 }
 .websites .capatcha 
 {
@@ -1260,7 +1260,7 @@ transition: width 1s ease;
 }
 .websites .capatcha:hover 
 {
-    height: 480px !important;
+    height: 500px !important;
 }
 .websites .games 
 {
@@ -1277,6 +1277,10 @@ transition: width 1s ease;
 .websites .givvy:hover 
 {
     height: 480px !important;
+}
+.dashboard .main.websites
+{
+    grid-template-columns: minmax(350px, 1fr) !important;
 }
 }
 /* end websites  */
@@ -1450,9 +1454,18 @@ transition-delay: 0.2s;
     position: relative;
     filter: grayscale(1);
 }
+.explain .box .money-icon img
+{
+    width: 40px !important;
+    height: 40px !important;
+}
 .explain .box img{
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+    width: 100% !important;
+    height: 235px !important;
+    z-index: 10000;
+    position: relative;
 }
 .wallets-page .wallets .wallet.payeer img,
 .wallets-page .wallets .wallet.tonkeeper img,
@@ -1839,7 +1852,7 @@ transition-delay: 0.2s;
 
 }
 .wallets-page{
-    grid-column: 1/3;
+    grid-column: 1/2;
 }
 .wallets-page .wallets .wallet.faucetpay {
     height: 500px !important;
@@ -2330,12 +2343,10 @@ transition-delay: 0.2s;
 }
 .contact-page .contact .box img
 {
-    width: 300px;
-    height: 400px;
+    width: 340px !important;
+    height: 400px !important;
     position: relative;
     left: 0px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 .contact-page .contact .box .icons .whatsapp a,
 .contact-page .contact .box .icons .Telegram a,
@@ -2399,12 +2410,13 @@ transition-delay: 0.2s;
     {
         flex-direction: column;
         width:350px;
-        height: 810px;
+        height: 780px;
         margin: auto;
     }
     .contact-page .contact .box img
     {
-        width: 350px;
+        width: 100% !important;
+        height: 320px !important;
     }
 
     .FormAndIcons {
@@ -2412,7 +2424,6 @@ transition-delay: 0.2s;
         flex-direction: column !important;
         gap: 30px;
         margin: auto;
-        margin-left: auto !important;
     }
     .FormAndIcons .icons
     {
