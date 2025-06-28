@@ -1769,7 +1769,7 @@ transition-delay: 0.2s;
     }
     .explain .box button a 
     {
-        bottom: 5px !important;
+        bottom: 10px !important;
     }
     .explain .box button
     {
@@ -1953,15 +1953,15 @@ transition-delay: 0.2s;
 .explanation .cont .box.soc img
 {
     width: 300px !important;
-    height: 60px;
+    height: 60px !important;
 }
 .explanation .cont .box.visit img,
 .explanation .cont .box.teaser img,
 .explanation .cont .box.payup img,
 .explanation .cont .box.getlike img
 {
-    width: 250px;
-    height: 50px;
+    width: 250px !important;
+    height: 100px !important;
 }
 .explanation .cont .box:hover img{
     filter:grayscale(0) ;
@@ -3286,8 +3286,8 @@ transition-delay: 0.2s;
 {
     .freelancing .freelance.tech .card img
 {
-    width: 420px;
-    height: 300px;
+    width: 420px !important;
+    height: 300px !important;
     right: 20%;
 } 
 }
