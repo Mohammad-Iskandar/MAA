@@ -2433,13 +2433,13 @@ transition-delay: 0.2s;
     {
         flex-direction: row !important;
         right: 30px !important;
-        top: 20px !important;
+        top: 50px !important;
         width: 120% !important;
         height: 50px !important;
     }
     .contact-page .contact .box:hover .icons 
     {
-        top: -20px !important;
+        top: 10px !important;
     }
     .FormAndIcons {
         margin: 20px auto 0 !important;
