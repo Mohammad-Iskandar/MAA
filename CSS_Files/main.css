@@ -1769,6 +1769,10 @@ transition-delay: 0.2s;
     }
     .explain .box button a 
     {
+        bottom: 5px !important;
+    }
+    .RussianSites.explain .box button a
+    {
         bottom: 10px !important;
     }
     .explain .box button
