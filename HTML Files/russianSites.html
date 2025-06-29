@@ -936,25 +936,6 @@
             });
         });
     </script>
-    <script>
-        let backupCount = localStorage.getItem('backupVisitCount') || 0;
-        backupCount = parseInt(backupCount);
-        
-        fetch('https://api.countapi.xyz/update/maa-site-unique/homepage-visits/?amount=1')
-        .then(res => {
-            if (!res.ok) throw new Error("فشل الاتصال بالعداد");
-            return res.json();
-        })
-        .then(data => {
-            document.getElementById('visit-count').innerText = data.value.toLocaleString(); 
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            backupCount++;
-            localStorage.setItem('backupVisitCount', backupCount);
-            document.getElementById('visit-count').innerText = backupCount;
-        });
-    </script>
     <script src="../JS_Files/DarkMode.js"></script>
     <script src="../JS_Files/script.js"></script>
     <script src="../JS_Files/news_script.js"></script>
