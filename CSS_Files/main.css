@@ -2413,9 +2413,9 @@ transition-delay: 0.2s;
     .contact-page .contact .box
     {
         flex-direction: column;
-        width:350px;
-        height: 780px;
-        margin: auto;
+        width: 370px !important;
+        height: 780px !important;
+        margin: inherit !important;
     }
     .contact-page .contact .box img
     {
