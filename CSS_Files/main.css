@@ -2209,7 +2209,7 @@ transition-delay: 0.2s;
     }
     .explanation .cont .box img
     {
-        width: -webkit-fill-available;
+        width: -webkit-fill-available !important;
     }
     .explanation .cont .box.getlike img
     {
@@ -2622,7 +2622,7 @@ transition-delay: 0.2s;
 }
 .usertesting-page .usertesting .user img
 {
-    width: 100%;
+    width: 100% !important;
 }
 .usertesting-page .usertesting .user
 {
@@ -2969,11 +2969,11 @@ transition-delay: 0.2s;
 }
 .Games .games .game:not(:last-child):hover
 {
-    height: 420px;
+    height: 480px;
 }
 .Games .games .game.testerup:hover
 {
-    height: 420px;
+    height: 480px;
 }
 .Games .games .game.testerup:hover
 {
