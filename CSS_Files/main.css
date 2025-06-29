@@ -1303,6 +1303,11 @@ transition: width 1s ease;
     padding-left: 0px;
     padding-right: 0px;
 }
+.selling-pictures .pictures, .givvy_apps .givvy, .explain, .capatcha-tests .capatcha, .Games .games
+{
+    grid-template-columns: repeat(auto-fill,minmax(350px ,1fr)) !important;
+    
+}
 }
 
 .write-article .articles .article,
@@ -2631,6 +2636,10 @@ transition-delay: 0.2s;
 {
     text-align: center;
 }
+.usertesting-page .usertesting
+{
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
+}
 }
 /* End UserTesting page */
 /* start freelancing page  */
@@ -2693,6 +2702,10 @@ transition-delay: 0.2s;
     .explanation .box .intro .info p 
     {
         text-align: center;
+    }
+    .freelance
+    {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
     }
 }
 /* end freelancing page  */
