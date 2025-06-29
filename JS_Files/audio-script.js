@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let audioDuration = 0;
     let isDurationKnown = false;
 
+    const audioFile = "https://mohammad-iskandar.github.io/MAA/audio/" + 
+                              encodeURIComponent("AudioCutter_Best classical music. Music for the soul Beethoven, Mozart, Schubert.mp3");
+            audio.src = audioFile;
+    
     // دالة لتنسيق الوقت
     function formatTime(seconds) {
         if (isNaN(seconds)) return "0:00";
