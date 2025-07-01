@@ -677,6 +677,13 @@ a{text-decoration: none;}
     transform: translateY(-50%);
 }
 /* Mobile Styles */
+@media (max-width:380px) {
+    .dashboard .head .card.darkmode,
+    .dashboard .head .card#visit-counter
+    {
+        width: 150px !important;
+    }
+}
 @media (max-width:600px)
 {
     .land {
@@ -748,7 +755,21 @@ a{text-decoration: none;}
             padding: 15px;
         }
 }
-
+@media (min-width:600px) and (max-width:800px)
+{
+    .dashboard .head .card.darkmode,
+    .dashboard .head .card#visit-counter
+    {
+        width: 270px !important;
+    }
+}
+@media (min-width:768px) and (max-width:1115px)
+{
+    .card.darkmode p,.head .card.music h2
+    {
+        font-size: 25px !important;
+    }
+}
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
@@ -953,6 +974,13 @@ footer p i {
         text-align: center;
     }
 }
+@media (min-width:768px) and (max-width:1115px)
+{
+    footer
+    {
+        margin-right: 30px !important;
+    }
+}
 /* end footer */
 /* start new project sec */
 .new_project,
@@ -1075,6 +1103,13 @@ background-color:   var(--main-color);
     {
         font-size: 25px;
     }
+}
+@media (min-width:768px) and (max-width:1115px)
+{
+        .main .card.newProject
+        {
+            display: block !important;
+        }
 }
 /* end new project sec */
 /* start progress bar VC  */
