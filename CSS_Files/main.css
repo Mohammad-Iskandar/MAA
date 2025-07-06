@@ -2100,6 +2100,7 @@ transition-delay: 0.2s;
 {
     height: 240px;
     overflow-y: scroll;
+    direction: rtl;
 }
 .explanation .box.unknown .intro .info
 {
@@ -2989,6 +2990,34 @@ transition-delay: 0.2s;
 {
     height: 185px;
 }
+.Games .games .game.game.testerheld{
+    height: 200px;
+}
+.Games .games .game.game.testerheld:hover{
+    height: 250px;
+}
+.Games .games .game.game.playtestcloud{
+    height: 200px;
+}
+.Games .games .game.game.playtestcloud:hover{
+    height: 270px;
+}
+.Games .games .game 
+{
+    overflow-Y: scroll;
+}
+.Games .games .game::-webkit-scrollbar 
+{
+    width: 0px;
+}
+@media (min-width:767px)
+{
+    .Games .games .game img
+    {
+        width: 360px !important;
+        height: 220px !important;
+    }
+}
 @media (max-width:767px) {
     .Games
 {
@@ -3000,19 +3029,35 @@ transition-delay: 0.2s;
 }
 .Games .games .game:hover
 {
-    height: 360px;
+    height: 360px !important;
 }
 .Games .games .game:not(:last-child):hover
 {
-    height: 480px;
+    height: 480px !important;
 }
 .Games .games .game.testerup:hover
 {
-    height: 480px;
+    height: 480px !important;
 }
 .Games .games .game.testerup:hover
 {
-    height: 420px;
+    height: 420px !important;
+}
+.Games .games .game.testerheld
+{
+    height: 510px !important;
+}
+.Games .games .game.testerheld:hover
+{
+    height: 610px !important;
+}
+.Games .games .game.playtestcloud
+{
+    height: 410px !important;
+}
+.Games .games .game.playtestcloud:hover
+{
+    height: 470px !important;
 }
 }
 /* end games page */
